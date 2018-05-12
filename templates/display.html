@@ -16,13 +16,25 @@
 		<input type="text" name="state" placeholder="enter state">
 			<button>Go!</button>
 	</form>
-	<h1>Details:</h1>
 	
-	<table class="table table-striped">
-		{% for num in location %}
-		<tr><td> {{num}} </td></tr>
-		{% endfor %}
-	</table>
+	<div id="left">
+		<h1>Details:</h1>
+		<table class="table table-striped">
+			{% for num in location %}
+			<tr><td> {{num}} </td></tr>
+			{% endfor %}
+		</table>
+	</div>
+	<style type="text/css">
+		#left{
+			float: right;
+			width: 50%;
+		}
+		#map{
+			background-color: red;
+			margin: 25px;
+		}
+	</style>
 
 	<div id="map" class="thisMap" style="width:600px;height:400px;"></div>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCANwUbNqn7nOnqcwUG2p2PX5O0cg7sINE&libraries=places&callback=initMap" async defer></script>
