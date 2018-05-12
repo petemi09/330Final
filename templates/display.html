@@ -17,7 +17,7 @@
 			<button>Go!</button>
 	</form>
 	
-	<div id="left">
+	<div id="right">
 		<h1>Details:</h1>
 		<table class="table table-striped">
 			{% for num in location %}
@@ -26,7 +26,7 @@
 		</table>
 	</div>
 	<style type="text/css">
-		#left{
+		#right{
 			float: right;
 			width: 50%;
 		}
@@ -35,6 +35,15 @@
 			margin: 25px;
 		}
 	</style>
+	<script type="text/javascript">
+		function initMap(){
+			var city = {lat: {{lat}}, lng: {{lng}}};
+			var map = new google.maps.Map(document.getElementById('map'),{
+					zoom: 13,
+					center: city
+				});
+		}
+	</script>
 
 	<div id="map" class="thisMap" style="width:600px;height:400px;"></div>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCANwUbNqn7nOnqcwUG2p2PX5O0cg7sINE&libraries=places&callback=initMap" async defer></script>

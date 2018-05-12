@@ -25,12 +25,14 @@ def procform():
 	gm = googlemaps.Client(key = key)
 	geocode_result = gm.geocode(full_name)[0]
 	detail = []
+	lat = geocode_result['geometry']['location']['lat']
+	lng = geocode_result['geometry']['location']['lng']
 	detail.append("Formal address: " + geocode_result['formatted_address'])
 	detail.append("Region: "+ geocode_result['address_components'][1]['long_name'])
 	detail.append("Latitude: "+ str(geocode_result['geometry']['location']['lat']))
 	detail.append("Longitude: "+ str(geocode_result['geometry']['location']['lng']))
 
-	return render_template('display.html', location = detail)
+	return render_template('display.html', location = detail, lat = lat, lng = lng)
 
 @app.route('/newuser')
 def new_user():
