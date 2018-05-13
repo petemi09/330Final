@@ -47,7 +47,10 @@
 			<tr><td> {{num}} </td></tr>
 			{% endfor %}
 		</table>
+
+		<h2>{{place}}</h2>
 	</div>
+
 	<style type="text/css">
 		#right{
 			float: right;
@@ -58,6 +61,19 @@
 			margin: 25px;
 		}
 	</style>
+
+	<div id="left">
+		<script type="text/javascript">
+			function initMap(){
+				var city = {lat: {{lat}}, lng: {{lng}}};
+				var map = new google.maps.Map(document.getElementById('map'),{
+						zoom: 13,
+						center: city
+					});
+			}
+		</script>
+	</div>
+
 
 	<script>
     function initMap() {

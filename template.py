@@ -38,7 +38,7 @@ def procform():
 	detail.append("Latitude: "+ str(geocode_result['geometry']['location']['lat']))
 	detail.append("Longitude: "+ str(geocode_result['geometry']['location']['lng']))
 
-	return render_template('display.html', location = detail, lat = lat, lng = lng)
+	return render_template('display.html', location = detail, lat = lat, lng = lng, place = full_name)
 
 @app.route('/newuser')
 def new_user():
