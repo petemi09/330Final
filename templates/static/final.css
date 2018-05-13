@@ -1,11 +1,19 @@
 h1 {
+	color: white;
+	text-align: center;
+}
 
-	color: red;
+p {
+	color: white;
+	text-align: center;
 }
 
 
 body { 
-
+	max-width: 75%;
+    margin: auto;
+    
+    padding: 10px;
     background-color: black;
     text-align: center;	
 }
