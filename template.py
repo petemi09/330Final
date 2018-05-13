@@ -3,17 +3,17 @@ import random
 
 app = Flask(__name__)
 
-users = {"millan04": "andrew", "millaand000": "millan"}
+users = {"millan04": "andrew", "millaand000": "millan", "petemi09": "1234"}
 
 @app.route('/')
 def login():
 	user_name = request.args.get("user")
 	password = request.args.get("password")
 	not_robot = request.args.get("robot")
-	if (user_name in users) and (users[user_name] == password) and isinstance(not_robot, str):
+	if (user_name in users) and (users[user_name] == password):# and isinstance(not_robot, str):
 		return render_template('display.html')
 	else:
-		return render_template('login.html', message = "Incorrecct Username or Password or user is a Robot")
+		return render_template('login.html', message = users)
 
 @app.route('/processform')
 def procform():

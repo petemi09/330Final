@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="templates/final.css">
+	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -10,6 +10,22 @@
 	<title>New User</title>
 </head>
 <body>
+	<style type="text/css">
+		body{
+			background-color: black;
+			color: white;
+			text-align: center;
+		}
+		.b4{
+			color: green;
+		}
+		footer{
+			color: white;
+			position: relative;
+			bottom: -100px;
+		}
+	</style>
+	<img src="static/logo.png" alt="title" class="center" width="600" height="200">
 	<h1>Welcome to ...</h1>
 	<p>Hello welcome to... we are happy that you are joining our community</p>
 	<form action = "/newuser">
@@ -19,12 +35,12 @@
 		<br>
 		<br>
 		<input type="text" name="user" placeholder="Username">
-		<br>
+		
 		<br>
 		<input type="text" name="password" placeholder="Password">
 		<br>
 		<br>
-		<button>Create User</button>
+		<button class="b4">Create User</button>
 	</form>
 	{{message}}
 
@@ -32,5 +48,8 @@
 
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<footer>
+	created by Mitchell Petellin and Andrew Millan
+	</footer>
 </body>
 </html>
