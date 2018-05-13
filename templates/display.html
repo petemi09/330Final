@@ -57,10 +57,11 @@
 			width: 50%;
 		}
 		#map{
-			background-color: red;
+			
 			margin: 25px;
 		}
 	</style>
+<<<<<<< HEAD
 	<div id="left">
 		<script type="text/javascript">
 			function initMap(){
@@ -72,6 +73,29 @@
 			}
 		</script>
 	</div>
+=======
+
+	<script>
+    function initMap() {
+    var Decorah = {lat: 43.3111, lng: -91.8036};
+    var map = new google.maps.Map(document.getElementById('map'), {
+       	zoom: 13,
+        center: Decorah
+       });
+    }
+	</script>
+
+
+	<script type="text/javascript">
+		function initMap(){
+			var city = {lat: {{lat}}, lng: {{lng}}};
+			var map = new google.maps.Map(document.getElementById('map'),{
+					zoom: 13,
+					center: city
+				});
+		}
+	</script>
+>>>>>>> upstream/master
 
 	<!--<input type="text" name="city" placeholder="enter city">
 	<input type="text" name="state" placeholder="enter state">
