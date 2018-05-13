@@ -42,7 +42,7 @@
 	
 	<div id="right">
 		<h1>Details:</h1>
-		<table class="table table-striped">
+		<table class="table">
 			{% for num in location %}
 			<tr><td> {{num}} </td></tr>
 			{% endfor %}
@@ -54,10 +54,22 @@
 			width: 50%;
 		}
 		#map{
-			background-color: red;
+			
 			margin: 25px;
 		}
 	</style>
+
+	<script>
+    function initMap() {
+    var Decorah = {lat: 43.3111, lng: -91.8036};
+    var map = new google.maps.Map(document.getElementById('map'), {
+       	zoom: 13,
+        center: Decorah
+       });
+    }
+	</script>
+
+
 	<script type="text/javascript">
 		function initMap(){
 			var city = {lat: {{lat}}, lng: {{lng}}};
