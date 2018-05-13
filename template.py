@@ -2,17 +2,24 @@ from flask import Flask, request, render_template, jsonify
 import googlemaps
 app = Flask(__name__)
 
-users = {"millan04": "andrew", "millaand000": "millan"}
+users = {"millan04": "andrew", "millaand000": "millan", "petemi09": "1234"}
 
 @app.route('/')
 def login():
 	user_name = request.args.get("user")
 	password = request.args.get("password")
 	not_robot = request.args.get("robot")
+<<<<<<< HEAD
 	if (user_name in users) and (users[user_name] == password): # and isinstance(not_robot, str):
 		return render_template('display.html')
 	else:
 		return render_template('login.html', message = "Incorrecct Username or Password")
+=======
+	if (user_name in users) and (users[user_name] == password):# and isinstance(not_robot, str):
+		return render_template('display.html')
+	else:
+		return render_template('login.html', message = users)
+>>>>>>> upstream/master
 
 @app.route('/processform')
 def procform():
