@@ -18,29 +18,26 @@
 		.b5 {
 			color: green;
 		}
-		.right-bound{
-  			position: relative;
-  			top: -43px;
-  			left: 300px;
-		}
-		.left-bound{
-			position: relative;
-  			top: 10px;
-  			right: 300px;
-  		}
+		
   		footer{
 			color: white;
 			position: relative;
 			bottom: -200px;
+		}
+		.city1{
+			color: black;
+		}
+		.state1{
+			color: black;
 		}
 	</style>
 	<img src="static/logo.png" alt="title" class="center" width="600" height="200">
 	<h1>Search Area</h1>
 	<br>
 	<form action = "/processform">
-		<input type="text" name="city" placeholder="enter city">
-		<input type="text" name="state" placeholder="enter state">
-			<button>Go!</button>
+		<input type="text" class=city1 name="city" placeholder="enter city">
+		<input type="text" class=state1 name="state" placeholder="enter state">
+			<button class="b5">Go!</button>
 	</form>
 	
 	<div id="right">
@@ -71,18 +68,12 @@
 		}
 	</script>
 
-	<input type="text" name="city" placeholder="enter city">
+	<!--<input type="text" name="city" placeholder="enter city">
 	<input type="text" name="state" placeholder="enter state">
-	<button class="b5">Go!</button>
+	<button class="b5">Go!</button>-->
 
-	<br>
-	<div class="left-bound">
-		<h2>map</h2>
-		
-	</div>
-	<div class="right-bound">
-		<h2>city, state</h2>
-	</div>
+
+	
 
 
 	<div id="map" class="thisMap" style="width:600px;height:400px;"></div>
