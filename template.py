@@ -13,12 +13,8 @@ def login():
 	if (user_name in users) and (users[user_name] == password): # and isinstance(not_robot, str):
 		return render_template('display.html')
 	else:
-		return render_template('login.html', message = "Incorrecct Username or Password")
+		return render_template('login.html', message = " ")
 
-	if (user_name in users) and (users[user_name] == password):# and isinstance(not_robot, str):
-		return render_template('display.html')
-	else:
-		return render_template('login.html', message = users)
 
 @app.route('/processform')
 def procform():
@@ -45,7 +41,7 @@ def new_user():
 	user_name = request.args.get("user")
 	password = request.args.get("password")
 	if user_name in users:
-		return render_template('newuser.html', message = "Username already in use")
+		return render_template('newuser.html', message = " ")
 		
 	else:
 		users[user_name] = password
