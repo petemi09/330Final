@@ -13,7 +13,7 @@ def login():
 	if (user_name in users) and (users[user_name] == password): # and isinstance(not_robot, str):
 		return render_template('display.html')
 	else:
-		return render_template('login.html', message = " ")
+		return render_template('index.html', message = " ")
 
 
 @app.route('/processform')
@@ -45,6 +45,6 @@ def new_user():
 		
 	else:
 		users[user_name] = password
-		return render_template('login.html')
+		return render_template('index.html')
 if __name__ == '__main__':
 	app.run(debug=True)

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<title>Login</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<link  rel="stylesheet" type="text/css" href="/static/final.css">
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+
+
+	</head>
+	<style type="text/css">
+		body{
+			background-color: black;
+			color: white;
+			text-align: center;
+		}
+		.button1{
+			color: green;
+		}
+		.b3{
+			color: blue;
+		}
+		.user1{
+			color: black;
+		}
+
+		.password1{
+			color: black;
+		}
+		#title{
+			background-color: blue;
+			padding: 5px;
+		}
+		footer{
+			color: white;
+			position: relative;
+			bottom: -180px;
+		}
+	</style>
+	
+	<body>
+		
+		
+		<div id="title">
+			<h1 class="title"> PLACES </h1>
+		</div>
+		<div name="this1">
+			<form action = "/">
+				<br>
+				<input type="text" class="user1" name="user" placeholder="user name">
+				
+				<br>
+				<input type="password" class="password1" name="password" placeholder="password">
+				<br>
+
+				<button class="button1" name="Enter">ENTER!</button>
+
+
+				<br>
+			</form>
+			<form action = "/newuser">
+				<button class="b3" name="b2">If new User click here to create account</button>
+			</form>
+			{{message}}
+		</div>
+
+		
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<footer>
+		created by Mitchell Petellin and Andrew Millan
+		</footer>
+	</body>
+</html>
